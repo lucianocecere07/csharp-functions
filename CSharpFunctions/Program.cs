@@ -34,18 +34,18 @@ StampaArrayInteri(arrayNumeri);
 
 //-------------------------FUNZIONI----------------------------//
 //stampa a video il contenuto dell’array
-void StampaArrayInteri(int[] arrayInteri)
+void StampaArrayInteri(int[] array)
 {
     Console.Write("[");
-    for (int i = 0; i < arrayInteri.Length; i++)
+    for (int i = 0; i < array.Length; i++)
     {
-        if (i == arrayInteri.Length - 1)
+        if (i == array.Length - 1)
         {
-            Console.Write(arrayInteri[i]);
+            Console.Write(array[i]);
         }
         else
         {
-            Console.Write(arrayInteri[i] + ", ");
+            Console.Write(array[i] + ", ");
         }
     }
     Console.WriteLine("]");
@@ -59,6 +59,18 @@ int Quadrato(int numero)
     return numero;
 }
 
+
+//array di numeri interi, restituisca un nuovo array con tutti gli elementi elevati quadrato.
+int[] ElevaArrayAlQuadrato(int[] array)
+{
+    int[] copiaArray = (int[])array.Clone(); //--->copia dell'array
+
+    for(int i = 0; i < array.Length; i++)
+    {
+        copiaArray[i] = copiaArray[i] * copiaArray[i];
+    }
+    return copiaArray;
+}
 
 
 
