@@ -52,6 +52,14 @@ void StampaArrayInteri(int[] arrayInteri)
 }
 
 
+//stampa quadrato del numero passato come parametro
+int Quadrato(int numero)
+{
+    numero = numero * numero;
+    return numero;
+}
+
+
 
 
 
