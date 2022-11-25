@@ -82,7 +82,7 @@ int[] ElevaArrayAlQuadrato(int[] array)
 
     for(int i = 0; i < array.Length; i++)
     {
-        copiaArray[i] = copiaArray[i] * copiaArray[i];
+        copiaArray[i] = Quadrato(copiaArray[i]);
     }
     return copiaArray;
 }

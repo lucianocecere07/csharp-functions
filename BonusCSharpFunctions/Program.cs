@@ -10,13 +10,10 @@ Rieseguire il programma con l’input preso esternamente dall’utente.
 
 //------------------bonus-----------
 //chiedere all’utente quanti numeri voglia inserire
-
-int[] arrayNumeriSceltiDaUtente = { };
-
+//correzione mattina senza Method
 Console.Write("Quanti numeri vuoi inserire? ");
 int lunghezzaArray = int.Parse(Console.ReadLine());
-Array.Resize(ref arrayNumeriSceltiDaUtente, lunghezzaArray); // ---> Array.Resize Method
-
+int[] arrayNumeriSceltiDaUtente = new int[lunghezzaArray];
 for (int i = 0; i < lunghezzaArray; i++)
 {
     Console.Write("Inserisci un numero: ");
@@ -68,6 +65,13 @@ void StampaArrayInteri(int[] array)
     Console.WriteLine("]");
 }
 
+//stampa quadrato del numero passato come parametro
+int Quadrato(int numero)
+{
+    numero = numero * numero;
+    return numero;
+}
+
 
 //array di numeri interi, restituisca un nuovo array con tutti gli elementi elevati quadrato ---> copiaArray = array copiato per modifica
 int[] ElevaArrayAlQuadrato(int[] array)
@@ -76,7 +80,7 @@ int[] ElevaArrayAlQuadrato(int[] array)
 
     for (int i = 0; i < array.Length; i++)
     {
-        copiaArray[i] = copiaArray[i] * copiaArray[i];
+        copiaArray[i] = Quadrato(copiaArray[i]);
     }
     return copiaArray;
 }
@@ -101,6 +105,8 @@ int SommaElementiArray(int[] array)
 
 
 /*
+ ESERCIZIO DI BASE
+
 Funzioni di base:
 - void StampaArrayInteri(int[] array): che preso un array di numeri interi, stampa a video il contenuto dell’array in questa forma “[elemento 1, elemento 2, elemento 3, ...]”.
 - int Quadrato(int numero): che vi restituisca il quadrato del numero passato come parametro.
@@ -262,5 +268,21 @@ int[] ElevaArrayAlQuadrato(int[] array)
         copiaArray[i] = copiaArray[i] * copiaArray[i];
     }
     return copiaArray;
+}
+*/
+
+/*
+//uso di Array.Resize Method
+
+int[] arrayNumeriSceltiDaUtente = { };
+
+Console.Write("Quanti numeri vuoi inserire? ");
+int lunghezzaArray = int.Parse(Console.ReadLine());
+Array.Resize(ref arrayNumeriSceltiDaUtente, lunghezzaArray); // ---> Array.Resize Method
+
+for (int i = 0; i < lunghezzaArray; i++)
+{
+    Console.Write("Inserisci un numero: ");
+    arrayNumeriSceltiDaUtente[i] = int.Parse(Console.ReadLine());
 }
 */
